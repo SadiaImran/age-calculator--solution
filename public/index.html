@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col justify-center items-center h-screen bg-off-White font-Poppins font-semibold">
+  <!-- Main Container -->
+  <div class="m-4 container w-full h-full lg:h-[520px] sm:w-6/12 shadow-xl 
+  drop-shadow-lg  bg-White rounded-t-2xl rounded-bl-2xl rounded-br-[8rem] ">
+
+    <!-- Date Container -->
+    <div class="input-container flex  uppercase md:px-6 md:pt-10 pt-6 max-w-md gap-5">
+      <!-- Day Container -->
+      <div class="day flex flex-col gap-2 ">
+        <label for="Day" class="tracking-widest text-Smokey-Grey text-xs md:text-sm " id="day-label">Day</label>
+        <input id="Day" type="text" placeholder="DD" class="outline-none border-2 border-light-Grey   w-full md:h-1/5 h-1/5 rounded-md py-6 px-3 text-off-Black font-extrabold text-lg    hover:border-age-Purple cursor-pointer">
+        <span id="error-field" class="hidden text-light-Red normal-case text-xs italic font-extralight">This field is required</span>
+      </div>
+      <!-- Month Container -->
+      <div class="month flex flex-col gap-2 ">
+        <label for="Month" class="tracking-widest text-Smokey-Grey text-xs md:text-sm">Month</label>
+        <input id="Month" type="text" placeholder="MM" class="outline-none border-2 border-light-Grey w-full h-1/5 rounded-md py-6 px-3 text-off-Black font-extrabold text-lg    hover:border-age-Purple cursor-pointer">
+        <span id="error-field" class="hidden text-light-Red normal-case text-xs italic font-extralight">This field is required</span>
+      </div>
+      <!-- Year Container -->
+      <div class="year flex flex-col gap-2 ">
+        <label for="Year" class="tracking-widest text-Smokey-Grey text-xs md:text-sm">Year</label>
+        <input id="Year" type="text" placeholder="YYYY" class="outline-none border-2 border-light-Grey w-full h-1/5 rounded-md py-6 px-3 text-start text-off-Black font-extrabold text-lg hover:border-age-Purple cursor-pointer">
+        <span id="error-field" class="hidden text-light-Red normal-case text-xs italic font-extralight">This field is required</span>
+      </div>
+    </div>
+    
+    <!-- Line & Arrow Container -->
+    <div class="container flex justify-between relative items-center md:-mt-4 mt-7 md:px-6 px-0">
+      <!-- Line Container -->
+      <div class="w-full h-0.5  bg-light-Grey"></div>
+      
+      <!-- Arrow Container -->
+      <div id="arrow-button" class=" bg-age-Purple absolute md:static left-[40%] cursor-pointer hover:bg-off-Black rounded-full p-3 ">
+        <img class="" src="./images/icon-arrow.svg" alt="">
+      </div>
+    </div>
+
+      <!-- Display Section -->
+      <div class="container italic md:px-6 px-2 pt-10 md:pt-0">
+        <!-- year display -->
+        <div class="year-display  flex items-center gap-6 ">
+          <span class="text-age-Purple lg:text-8xl text-6xl " id="display-year">--</span>
+          <h3 class="text-off-Black lg:text-5xl text-4xl font-[900]">Years</h3>
+        </div>
+        <!-- months display -->
+        <div class="month-display flex items-center gap-6 ">
+          <span class="text-age-Purple lg:text-8xl text-6xl" id="display-month">--</span>
+          <h3 class="text-off-Black lg:text-5xl text-4xl font-[900]">months</h3>
+        </div>
+        <!-- days display -->
+        <div class="days-display flex items-center gap-6 ">
+          <span class="text-age-Purple lg:text-8xl text-6xl" id="display-days">--</span>
+          <h3 class="text-off-Black lg:text-5xl text-4xl font-[900]">days</h3>
+        </div>
+      </div>
+
+    
+  </div>
+
+  
+  
+
+  <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sadia Imran</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
